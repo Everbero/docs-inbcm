@@ -21,4 +21,5 @@ nav:
     - 'Observações': 'arquitetura/seguranca/seguranca.md'
 theme: readthedocs
 plugins:
+  - search
   - mermaid2
