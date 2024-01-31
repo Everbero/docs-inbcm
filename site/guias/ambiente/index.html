@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Douglas de Araújo" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Configurando o ambiente - INCMB</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Configurando o ambiente";
+        var mkdocs_page_input_path = "guias/ambiente.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> INCMB
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Primeiros Passos</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Configurando o ambiente</a>
+    <ul class="current">
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../wordpress/">Instalando o Wordpress</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Arquitetura</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/incbm/">INCMB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/tainacam-sync/">Tainacam Sync</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/cliente-offline/">Cliente Offline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Padrões</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/padroes/arquivos/">Arquivos de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/padroes/imagens/">Imagens</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Processos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/processos/validacao/">Validação de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/processos/manutencao-imagens/">Manutenção de imagens</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">INCMB</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Primeiros Passos &raquo;</li>
+      <li class="breadcrumb-item active">Configurando o ambiente</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 id="configuracao-de-ambiente-de-desenvolvimento-ubuntu">Configuração de Ambiente de Desenvolvimento Ubuntu</h2>
+<p>Este guia fornecerá orientações sobre como obter o sistema operacional Ubuntu e destacará as vantagens da arquitetura para o desenvolvimento web, seguido por uma lista de requisitos desejáveis para o desenvolvimento de plugins WordPress e aplicativos Electron.</p>
+<h2 id="obtendo-o-ubuntu">Obtendo o Ubuntu</h2>
+<ul>
+<li><strong>Download e Instalação:</strong></li>
+<li>Acesse o site oficial do <a href="https://ubuntu.com/download">Ubuntu</a> para baixar a versão desejada.</li>
+<li>Siga as instruções de instalação fornecidas no site.</li>
+</ul>
+<h2 id="vantagens-da-arquitetura-ubuntu-para-desenvolvimento-web">Vantagens da Arquitetura Ubuntu para Desenvolvimento Web</h2>
+<ol>
+<li>
+<p><strong>Estabilidade e Segurança:</strong><br />
+O Ubuntu é conhecido por sua estabilidade e segurança, proporcionando um ambiente confiável para o desenvolvimento.</p>
+</li>
+<li>
+<p><strong>Sistema de Gerenciamento de Pacotes:</strong><br />
+O Ubuntu utiliza o APT (Advanced Package Tool), facilitando a instalação e atualização de software com um simples comando.</p>
+</li>
+<li>
+<p><strong>Comunidade Ativa:</strong><br />
+A comunidade Ubuntu é vasta e ativa, oferecendo suporte e recursos valiosos para desenvolvedores.</p>
+</li>
+<li>
+<p><strong>Desempenho Eficiente:</strong><br />
+O Ubuntu é conhecido por seu desempenho eficiente, beneficiando o desenvolvimento web.</p>
+</li>
+</ol>
+<h2 id="requisitos-desejaveis-para-desenvolvimento-wordpress">Requisitos Desejáveis para Desenvolvimento WordPress</h2>
+<ol>
+<li>
+<p><strong>Ambiente LAMP ou LEMP:</strong><br />
+Configuração do servidor web (Apache ou Nginx). Veja <a href="../wordpress/">Instalando o Wordpress</a>
+Servidor de banco de dados MySQL ou MariaDB.
+PHP para processamento do lado do servidor.</p>
+</li>
+<li>
+<p><strong>Editor de Texto ou IDE:</strong><br />
+Recomenda-se o uso de um editor de texto avançado (VSCode, Sublime Text) ou uma IDE (Integrated Development Environment) para facilitar o desenvolvimento.</p>
+</li>
+<li>
+<p><strong>Conhecimento em PHP, HTML e CSS:</strong><br />
+Conhecimento em PHP para o desenvolvimento de lógica do plugin.
+HTML e CSS para a criação da interface do usuário.</p>
+</li>
+<li>
+<p><strong>Acesso a um Ambiente WordPress:</strong><br />
+Um ambiente WordPress instalado localmente ou em um servidor de desenvolvimento.</p>
+</li>
+</ol>
+<h2 id="requisitos-desejaveis-para-desenvolvimento-electron">Requisitos Desejáveis para Desenvolvimento Electron</h2>
+<ol>
+<li>
+<p><strong>Node.js e npm:</strong><br />
+Instalação do Node.js e npm para gerenciamento de pacotes.</p>
+</li>
+<li>
+<p><strong>Conhecimento em JavaScript:</strong><br />
+Habilidade em JavaScript para o desenvolvimento do aplicativo Electron.</p>
+</li>
+<li>
+<p><strong>Editor de Texto ou IDE:</strong><br />
+Uso de um editor de texto ou IDE para escrever código JavaScript.</p>
+</li>
+<li>
+<p><strong>Entendimento de HTML e CSS:</strong><br />
+Compreensão de HTML e CSS para o desenvolvimento da interface do usuário.</p>
+</li>
+<li>
+<p><strong>Ambiente de Desenvolvimento:</strong><br />
+Um ambiente configurado para execução de aplicativos Electron, incluindo a instalação do Electron CLI.</p>
+</li>
+</ol>
+<p>Ao seguir esses requisitos e utilizar o Ubuntu como ambiente de desenvolvimento, você estará preparado para criar plugins WordPress e aplicativos Electron de maneira eficiente e sustentável.</p>
+<h1 id="nota-para-usuarios-windows-por-que-evitar-o-xampp-para-desenvolvimento-web">Nota para Usuários Windows: Por Que Evitar o XAMPP para Desenvolvimento Web</h1>
+<p>Caro usuário Windows,</p>
+<p>Gostaríamos de fornecer algumas orientações sobre por que é recomendável evitar o uso do XAMPP para o desenvolvimento web e sugerir alternativas mais eficientes.</p>
+<h2 id="1-desatualizacao-e-manutencao">1. <strong>Desatualização e Manutenção:</strong></h2>
+<ul>
+<li>O XAMPP pode ficar desatualizado em relação às versões mais recentes do PHP, Apache e MySQL. Isso pode resultar em vulnerabilidades de segurança e falta de suporte às últimas funcionalidades.</li>
+</ul>
+<h2 id="2-configuracao-complexa">2. <strong>Configuração Complexa:</strong></h2>
+<ul>
+<li>A configuração do XAMPP pode ser complexa e exigir ajustes frequentes, especialmente ao lidar com diferentes projetos e requisitos de desenvolvimento.</li>
+</ul>
+<h2 id="3-desempenho-limitado">3. <strong>Desempenho Limitado:</strong></h2>
+<ul>
+<li>Em comparação com alternativas mais leves e específicas, o XAMPP pode consumir mais recursos do sistema, impactando o desempenho, principalmente em ambientes de desenvolvimento mais extensos.</li>
+</ul>
+<h2 id="4-compatibilidade-com-sistemas-de-controle-de-versao">4. <strong>Compatibilidade com Sistemas de Controle de Versão:</strong></h2>
+<ul>
+<li>O XAMPP nem sempre é amigável aos sistemas de controle de versão como o Git, o que pode dificultar o gerenciamento eficiente de projetos colaborativos.</li>
+</ul>
+<h2 id="alternativas-recomendadas">Alternativas Recomendadas:</h2>
+<p>Para um ambiente de desenvolvimento web mais robusto e eficiente, considere as seguintes alternativas:</p>
+<ul>
+<li>
+<p><strong>Docker:</strong><br />
+  Oferece ambientes isolados e facilmente replicáveis. É leve, atualizado regularmente e amplamente adotado na comunidade de desenvolvimento.</p>
+</li>
+<li>
+<p><strong>WampServer ou Laragon:</strong><br />
+  Alternativas mais leves e simples, com uma configuração amigável e eficiente para ambientes Windows.</p>
+</li>
+<li>
+<p><strong>Configuração Manual:</strong><br />
+  Configurar manualmente o Apache, PHP e MySQL pode proporcionar maior controle sobre as versões e uma configuração mais adaptada às necessidades específicas de cada projeto.</p>
+</li>
+</ul>
+<p>Ao optar por alternativas mais modernas e específicas para o desenvolvimento web, você terá um ambiente mais seguro, eficiente e fácil de manter. Essas opções também oferecem uma experiência de desenvolvimento mais alinhada com as práticas atuais da comunidade.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../.." class="btn btn-neutral float-left" title="Inicio"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../wordpress/" class="btn btn-neutral float-right" title="Instalando o Wordpress">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../.." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../wordpress/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

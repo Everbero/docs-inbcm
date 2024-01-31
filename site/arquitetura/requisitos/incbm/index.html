@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Douglas de Araújo" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>INCMB - INCMB</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "INCMB";
+        var mkdocs_page_input_path = "arquitetura/requisitos/incbm.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> INCMB
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Primeiros Passos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../guias/ambiente/">Configurando o ambiente</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../guias/wordpress/">Instalando o Wordpress</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Arquitetura</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">INCMB</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#funcionamento-remoto-e-interface-web">Funcionamento Remoto e Interface Web</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#importacao-e-validacao-de-informacoes">Importação e Validação de Informações</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_1">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#integracao-com-registro-de-museus-e-autenticacao">Integração com Registro de Museus e Autenticação</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_2">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#armazenamento-e-gestao-de-dados">Armazenamento e Gestão de Dados</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_3">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#periodos-de-lancamento-e-consulta-ao-cidadao">Períodos de Lançamento e Consulta ao Cidadão</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_4">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#busca-integrada-e-recuperacao-de-informacoes">Busca Integrada e Recuperação de Informações</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_5">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#perfis-de-acesso-e-auditoria">Perfis de Acesso e Auditoria</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_6">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#painel-de-relatorios">Painel de Relatórios</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#solucao-de-desenvolvimento_7">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#funcionalidade-especifica">Funcionalidade Específica:</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#formulario-online-para-recebimento-de-dados">Formulário Online para Recebimento de Dados</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#beneficios">Benefícios:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solucao-de-desenvolvimento_8">Solução de Desenvolvimento:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tainacam-sync/">Tainacam Sync</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../cliente-offline/">Cliente Offline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Padrões</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../padroes/arquivos/">Arquivos de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../padroes/imagens/">Imagens</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Processos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../processos/validacao/">Validação de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../processos/manutencao-imagens/">Manutenção de imagens</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">INCMB</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Arquitetura &raquo;</li>
+      <li class="breadcrumb-item active">INCMB</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="incbm-extensao-do-plugin-tainacam">INCBM - Extensão do Plugin Tainacam</h1>
+<p>O INCBM será uma extensão do plugin Tainacam, ampliando suas funcionalidades para permitir o recebimento, validação e indexação de arquivos de inventário. Essa extensão será executada exclusivamente no site do Ibram, garantindo um ambiente controlado para o processamento das informações.</p>
+<h2 id="funcionamento-remoto-e-interface-web">Funcionamento Remoto e Interface Web</h2>
+<p>O INCBM, implementado como uma extensão do plugin Tainacam no WordPress, disponibilizará uma API para funcionalidades remotas. Isso permitirá aos usuários realizar o download da extensão e a instalação local. A interface web integrada ao plugin facilitará o preenchimento do inventário, seja em modo rascunho ou para o envio final das informações ao Ibram.</p>
+<h4 id="solucao-de-desenvolvimento">Solução de Desenvolvimento:</h4>
+<p>Desenvolver o INCBM como uma extensão do plugin Tainacam no WordPress, incluindo uma interface web para o preenchimento do inventário e uma API para interação remota, garantindo uma experiência completa aos usuários durante o processo de inventário.</p>
+<h2 id="importacao-e-validacao-de-informacoes">Importação e Validação de Informações</h2>
+<p>O INCBM, como extensão do Tainacam, facilitará a importação e validação de dados e imagens nos formatos Xls, CSV ou Xml. Após validação, os dados serão disponibilizados para consulta no índice nacional através do Tainacam.</p>
+<h4 id="solucao-de-desenvolvimento_1">Solução de Desenvolvimento:</h4>
+<p>Implementar funcionalidades de importação e validação na extensão INCBM do plugin Tainacam. Isso garantirá a compatibilidade com os formatos especificados e permitirá que os dados importados, após validação, sejam disponibilizados no índice nacional através do Tainacam.</p>
+<h2 id="integracao-com-registro-de-museus-e-autenticacao">Integração com Registro de Museus e Autenticação</h2>
+<p>A integração com o registro de museus (Museus.Br) será uma forma de autenticar o envio, permitindo que apenas museus devidamente cadastrados possam utilizar as interfaces de envio de arquivos.</p>
+<h4 id="solucao-de-desenvolvimento_2">Solução de Desenvolvimento:</h4>
+<p>Integrar o INCBM ao registro de museus (Museus.Br) por meio da extensão Tainacam, utilizando um sistema de autenticação que valide o museu no momento do envio. A autenticação será realizada por meio do número de registro (login e senha na plataforma Museus.Br), garantindo que apenas instituições cadastradas possam enviar informações.</p>
+<h2 id="armazenamento-e-gestao-de-dados">Armazenamento e Gestão de Dados</h2>
+<p>A extensão INCBM do plugin Tainacam terá capacidade de armazenamento eficiente para dados e imagens, seguindo padrões para bens de interesse público.</p>
+<h4 id="solucao-de-desenvolvimento_3">Solução de Desenvolvimento:</h4>
+<p>Desenvolver uma solução robusta de armazenamento dentro da extensão INCBM, integrada ao Tainacam. Seguir padrões e procedimentos de gestão para garantir a eficiência no armazenamento.</p>
+<h2 id="periodos-de-lancamento-e-consulta-ao-cidadao">Períodos de Lançamento e Consulta ao Cidadão</h2>
+<p>O INCBM, como parte do Tainacam, permitirá a definição de períodos para o recebimento e reenvio de informações, além de disponibilizar uma interface de consulta pública, tornando os dados acessíveis aos cidadãos brasileiros.</p>
+<h4 id="solucao-de-desenvolvimento_4">Solução de Desenvolvimento:</h4>
+<p>Incorporar à extensão INCBM do plugin Tainacam a capacidade de definir períodos para o recebimento e reenvio de informações. Implementar uma interface de consulta pública para acesso transparente aos dados.</p>
+<h2 id="busca-integrada-e-recuperacao-de-informacoes">Busca Integrada e Recuperação de Informações</h2>
+<p>A extensão INCBM do Tainacam realizará buscas integradas em diferentes tipologias de acervo, facilitando a recuperação eficiente de informações entre declarações passadas.</p>
+<h4 id="solucao-de-desenvolvimento_5">Solução de Desenvolvimento:</h4>
+<p>Desenvolver funcionalidades de busca integrada na extensão INCBM do Tainacam, permitindo a recuperação eficiente de informações entre as tipologias de acervo. Facilitar a recuperação de informações de declarações anteriores.</p>
+<h2 id="perfis-de-acesso-e-auditoria">Perfis de Acesso e Auditoria</h2>
+<p>O INCBM, como extensão do Tainacam, terá funcionalidades para definir perfis de acesso, possibilitando uma administração eficaz, e registrará ações dos usuários para auditoria, incluindo uma interface gráfica para consulta e geração de relatórios gerenciais.</p>
+<h3 id="solucao-de-desenvolvimento_6">Solução de Desenvolvimento:</h3>
+<p>Implementar funcionalidades de perfis de acesso na extensão INCBM do plugin Tainacam. Registrar ações dos usuários para auditoria e criar uma interface gráfica para consulta e geração de relatórios gerenciais.</p>
+<h2 id="painel-de-relatorios">Painel de Relatórios</h2>
+<p>O painel de relatórios será integrado à extensão INCBM do plugin Tainacam, oferecendo uma visão consolidada e detalhada das atividades relacionadas ao inventário de bens culturais musealizados.</p>
+<p><strong>Dados de Acompanhamento</strong><br />
+O painel fornecerá estatísticas e métricas relacionadas aos envios de inventários, incluindo o número de envios por período, museu, e tipologia de acervo. Isso possibilitará uma visão geral do volume de informações processadas.</p>
+<p><strong>Quantificação dos Elementos de Acervo</strong><br />
+Os relatórios incluirão dados quantitativos sobre os elementos de acervo declarados, segmentados por tipologia, estado de conservação e outras características relevantes. Isso permitirá análises mais detalhadas sobre a composição do acervo musealizado.</p>
+<p><strong>Personalização de Relatórios</strong><br />
+Os usuários terão a capacidade de personalizar relatórios de acordo com suas necessidades específicas, escolhendo os parâmetros relevantes para análise. Isso garantirá flexibilidade na extração de informações específicas.</p>
+<p><strong>Acompanhamento em Tempo Real</strong><br />
+O painel de relatórios será atualizado em tempo real, proporcionando uma visão dinâmica das atividades de inventário. Os usuários poderão monitorar o progresso e identificar áreas que requerem atenção imediata.</p>
+<h3 id="solucao-de-desenvolvimento_7">Solução de Desenvolvimento:</h3>
+<p>Integrar ao INCBM uma funcionalidade avançada de painel de relatórios, utilizando gráficos interativos e tabelas dinâmicas para apresentação dos dados. Implementar algoritmos de análise para quantificação de elementos de acervo, oferecendo uma visão detalhada e personalizável para os usuários. Assegurar que o painel seja atualizado em tempo real para fornecer informações precisas e oportunas.</p>
+<h2 id="funcionalidade-especifica">Funcionalidade Específica:</h2>
+<h3 id="formulario-online-para-recebimento-de-dados">Formulário Online para Recebimento de Dados</h3>
+<p>O INCBM, como plugin WordPress, oferecerá aos usuários a funcionalidade de acessar um formulário online para o recebimento de dados do inventário. Este formulário será integrado à interface web do INCBM e permitirá aos usuários preencherem as informações necessárias sobre os elementos do acervo, seguindo as categorias de bens culturais musealizados.</p>
+<h4 id="beneficios">Benefícios:</h4>
+<ol>
+<li>
+<p><strong>Acessibilidade Remota:</strong> O formulário online possibilita que os usuários preencham os dados do inventário de forma remota, proporcionando flexibilidade de acesso.</p>
+</li>
+<li>
+<p><strong>Validação em Tempo Real:</strong> O INCBM realizará validações em tempo real durante o preenchimento, garantindo a conformidade com os requisitos estabelecidos pelo Ibram.</p>
+</li>
+<li>
+<p><strong>Facilidade de Envio:</strong> Após o preenchimento, os usuários poderão enviar os dados diretamente por meio da interface web do INCBM, simplificando o processo de declaração de inventário.</p>
+</li>
+</ol>
+<h4 id="solucao-de-desenvolvimento_8">Solução de Desenvolvimento:</h4>
+<p>Implementar um formulário online integrado à interface web do INCBM, utilizando tecnologias web modernas para garantir uma experiência de usuário intuitiva. O formulário será projetado para orientar os usuários na inserção correta de informações, enquanto validações em tempo real serão aplicadas para assegurar a precisão dos dados. Isso contribuirá para um processo eficiente de recebimento de dados do inventário musealizado.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../../guias/wordpress/" class="btn btn-neutral float-left" title="Instalando o Wordpress"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tainacam-sync/" class="btn btn-neutral float-right" title="Tainacam Sync">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../../guias/wordpress/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../tainacam-sync/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

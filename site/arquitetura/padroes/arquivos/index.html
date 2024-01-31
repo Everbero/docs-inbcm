@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Douglas de Araújo" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Arquivos de invetário - INCMB</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Arquivos de invet\u00e1rio";
+        var mkdocs_page_input_path = "arquitetura/padroes/arquivos.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> INCMB
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Primeiros Passos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../guias/ambiente/">Configurando o ambiente</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../../guias/wordpress/">Instalando o Wordpress</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Arquitetura</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../requisitos/incbm/">INCMB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../requisitos/tainacam-sync/">Tainacam Sync</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../requisitos/cliente-offline/">Cliente Offline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Padrões</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Arquivos de invetário</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#formato-csv-e-estrutura-de-imagens">Formato CSV e Estrutura de Imagens</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#campos-obrigatorios-no-arquivo-csv">Campos Obrigatórios no Arquivo CSV:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#estrutura-de-imagens">Estrutura de Imagens:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#processo-de-envio">Processo de Envio:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../imagens/">Imagens</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Processos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../processos/validacao/">Validação de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../processos/manutencao-imagens/">Manutenção de imagens</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">INCMB</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Padrões &raquo;</li>
+      <li class="breadcrumb-item active">Arquivos de invetário</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="padronizacao-de-arquivos-de-envio-para-inventario-musealizado">Padronização de Arquivos de Envio para Inventário Musealizado</h1>
+<h2 id="formato-csv-e-estrutura-de-imagens">Formato CSV e Estrutura de Imagens</h2>
+<p>Garantir a consistência nos dados do inventário musealizado é essencial para a eficiência do processo. Para atender a essa necessidade, todos os sistemas envolvidos (INCBM, Tainacam Sync e Cliente Offline) utilizarão o formato CSV para o arquivo de inventário. Este arquivo deverá conter campos obrigatórios para cada item, seguindo as diretrizes do Ibram.</p>
+<h3 id="campos-obrigatorios-no-arquivo-csv">Campos Obrigatórios no Arquivo CSV:</h3>
+<ol>
+<li><strong>Identificação do Item:</strong> Número único para cada item do inventário.</li>
+<li><strong>Descrição:</strong> Descrição detalhada do item, incluindo suas características e relevância.</li>
+<li><strong>Categorias:</strong> Classificação do item de acordo com as tipologias de acervo (museológico, arquivístico e bibliográfico).</li>
+<li><strong>Estado de Conservação:</strong> Condição física atual do item.</li>
+<li><strong>Data de Aquisição:</strong> Data em que o item foi adquirido.</li>
+<li><strong>Local de Origem:</strong> Local de origem do item.</li>
+</ol>
+<h3 id="estrutura-de-imagens">Estrutura de Imagens:</h3>
+<p>Para o envio eficiente de imagens, os clientes (Cliente Offline e Tainacam Sync) devem gerar uma estrutura de pastas/nome de arquivos para as imagens de cada item do inventário. O caminho das imagens será incluído no arquivo CSV, permitindo a referência correta.</p>
+<h3 id="processo-de-envio">Processo de Envio:</h3>
+<ol>
+<li>Os sistemas gerarão um arquivo CSV contendo os dados do inventário, incluindo o caminho das imagens.</li>
+<li>Os clientes (Cliente Offline e Tainacam Sync) criarão uma estrutura de pastas/nome de arquivos para as imagens conforme o caminho especificado.</li>
+<li>Os clientes comprimirão o arquivo CSV e a estrutura de imagens em um arquivo ZIP.</li>
+<li>O arquivo ZIP será enviado para o INCBM ou outros sistemas relacionados, garantindo uma transferência organizada e completa.</li>
+</ol>
+<p>Essa abordagem padronizada facilitará a consistência e o compartilhamento eficiente de dados entre os diferentes componentes do sistema, contribuindo para um processo integrado de gestão do inventário musealizado.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../../requisitos/cliente-offline/" class="btn btn-neutral float-left" title="Cliente Offline"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../imagens/" class="btn btn-neutral float-right" title="Imagens">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../../requisitos/cliente-offline/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../imagens/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
