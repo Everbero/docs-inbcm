@@ -1,6 +1,10 @@
 # Inventário Nacional de Bens Culturais Musealizados
-![Versão Beta](https://img.shields.io/badge/Vers%C3%A3o-Beta-yellow)
+![Versão Beta 0.1.0](https://img.shields.io/badge/Vers%C3%A3o-Beta-yellow)
 ![Aguardando Aprovação](https://img.shields.io/badge/Status-Aguardando%20Aprova%C3%A7%C3%A3o-lightgrey)
+
+**Autores:**  
+[Douglas de Araújo](https://github.com/everbero)  
+[Thiago Campos](https://github.com/thfields)
 
 Bem vindo à documentação técnica do INBCM, este repositório visa concentrar e padronizar todos
 os documentos de desenvolvimento do ecossistema INBCM.

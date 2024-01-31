@@ -6,6 +6,19 @@ O INCBM será uma extensão do plugin Tainacam, ampliando suas funcionalidades p
 
 O INCBM, implementado como uma extensão do plugin Tainacam no WordPress, disponibilizará uma API para funcionalidades remotas. Isso permitirá aos usuários realizar o download da extensão e a instalação local. A interface web integrada ao plugin facilitará o preenchimento do inventário, seja em modo rascunho ou para o envio final das informações ao Ibram.
 
+```mermaid
+graph TD    
+  A[Usuário] -->|Download e Instalação| B(Instalação Local)
+  B -->|Preenchimento do Inventário| C{Envio ao Ibram}
+  C -->|Envio com Sucesso| D[Finalizado]
+  C -->|Erro no Envio| E[Correções e Reenvio]
+  style A fill:#F9EBB2
+  style B fill:#AADFF9
+  style C fill:#E2F9D9
+  style D fill:#D6F4FF
+  style E fill:#F9C4C4
+```
+
 **Solução de Desenvolvimento:**
 
 Desenvolver o INCBM como uma extensão do plugin Tainacam no WordPress, incluindo uma interface web para o preenchimento do inventário e uma API para interação remota, garantindo uma experiência completa aos usuários durante o processo de inventário.
@@ -13,6 +26,15 @@ Desenvolver o INCBM como uma extensão do plugin Tainacam no WordPress, incluind
 ## Importação e Validação de Informações
 
 O INCBM, como extensão do Tainacam, facilitará a importação e validação de dados e imagens nos formatos Xls, CSV ou Xml. Após validação, os dados serão disponibilizados para consulta no índice nacional através do Tainacam.
+
+```mermaid
+graph TD
+  A[Museu] -->|Envio de Arquivos| B(INCBM)
+  B -->|Validação| C{Disponível no Tainacam}
+  style A fill:#AADFF9
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+```
 
 **Solução de Desenvolvimento:**
 
@@ -22,6 +44,19 @@ Implementar funcionalidades de importação e validação na extensão INCBM do 
 
 A integração com o registro de museus (Museus.Br) será uma forma de autenticar o envio, permitindo que apenas museus devidamente cadastrados possam utilizar as interfaces de envio de arquivos.
 
+```mermaid
+graph TD
+  A[Museu] -->|Envio de Arquivos| B(INCBM)
+  B -->|Validação| C{Autenticado no Museus.Br}
+  C -->|Autenticação Válida| D[Envio Permitido]
+  C -->|Autenticação Inválida| E[Envio Bloqueado]
+  style A fill:#AADFF9
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+  style D fill:#D6F4FF
+  style E fill:#F9C4C4
+```
+
 **Solução de Desenvolvimento:**
 
 Integrar o INCBM ao registro de museus (Museus.Br) por meio da extensão Tainacam, utilizando um sistema de autenticação que valide o museu no momento do envio. A autenticação será realizada por meio do número de registro (login e senha na plataforma Museus.Br), garantindo que apenas instituições cadastradas possam enviar informações.
@@ -29,6 +64,17 @@ Integrar o INCBM ao registro de museus (Museus.Br) por meio da extensão Tainaca
 ## Armazenamento e Gestão de Dados
 
 A extensão INCBM do plugin Tainacam terá capacidade de armazenamento eficiente para dados e imagens, seguindo padrões para bens de interesse público.
+
+```mermaid
+graph TD
+  A[Museu] -->|Envio de Arquivos| B(INCBM)
+  B -->|Armazenamento Eficiente| C{Padrões de Bens de Interesse Público}
+  C -->|Consulta| D[Indice Nacional Tainacam]
+  style A fill:#AADFF9
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+  style D fill:#D6F4FF
+```
 
 **Solução de Desenvolvimento:**
 
@@ -44,6 +90,15 @@ Desenvolver uma solução robusta de armazenamento dentro da extensão INCBM, in
 
 O INCBM, como parte do Tainacam, permitirá a definição de períodos para o recebimento e reenvio de informações, além de disponibilizar uma interface de consulta pública, tornando os dados acessíveis aos cidadãos brasileiros.
 
+```mermaid
+graph TD
+  A[Museu] -->|Envio de Arquivos| B(INCBM)
+  B -->|Definição de Períodos| C{Consulta Pública Tainacam}
+  style A fill:#AADFF9
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+```
+
 **Solução de Desenvolvimento:**
 
 Incorporar à extensão INCBM do plugin Tainacam a capacidade de definir períodos para o recebimento e reenvio de informações. Implementar uma interface de consulta pública para acesso transparente aos dados.
@@ -52,6 +107,15 @@ Incorporar à extensão INCBM do plugin Tainacam a capacidade de definir períod
 
 A extensão INCBM do Tainacam realizará buscas integradas em diferentes tipologias de acervo, facilitando a recuperação eficiente de informações.
 
+```mermaid
+graph TD
+  A[Usuário] -->|Busca Integrada| B(Tainacam)
+  B -->|Recuperação de Informações| C{Exibição na Interface Web}
+  style A fill:#F9EBB2
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+```
+
 **Solução de Desenvolvimento:**
 
 Desenvolver funcionalidades de busca integrada na extensão INCBM do Tainacam, permitindo a recuperação eficiente de informações entre as tipologias de acervo e a exibição dos dados por meio da interface web do Tainacam.
@@ -59,6 +123,18 @@ Desenvolver funcionalidades de busca integrada na extensão INCBM do Tainacam, p
 ## Perfis de Acesso e Auditoria
 
 O INCBM, como extensão do Tainacam, terá funcionalidades para definir perfis de acesso, possibilitando uma administração eficaz, e registrará ações dos usuários para auditoria, incluindo uma interface gráfica para consulta e geração de relatórios gerenciais.
+
+```mermaid
+graph TD
+  A[Administrador] -->|Definição de Perfis| B(INCBM)
+  B -->|Ações dos Usuários| C{Registros de Auditoria}
+  C -->|Consulta e Relatórios| D[Interface Gráfica]
+  style A fill:#F9EBB2
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+  style D fill:#D6F4FF
+
+```
 
 **Solução de Desenvolvimento:**
 
@@ -80,6 +156,15 @@ Os usuários terão a capacidade de personalizar relatórios de acordo com suas 
 **Acompanhamento em Tempo Real**  
 O painel de relatórios será atualizado em tempo real, proporcionando uma visão dinâmica das atividades de inventário. Os usuários poderão monitorar o progresso e identificar áreas que requerem atenção imediata.
 
+```mermaid
+graph TD
+  A[Usuário] -->|Acesso ao Painel| B(INCBM)
+  B -->|Visualização de Dados| C{Relatórios Gerenciais e Estatísticas}
+  style A fill:#F9EBB2
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+```
+
 **Solução de Desenvolvimento:**
 
 Integrar ao INCBM uma funcionalidade avançada de painel de relatórios, utilizando gráficos interativos e tabelas dinâmicas para apresentação dos dados. Implementar algoritmos de análise para quantificação de elementos de acervo, oferecendo uma visão detalhada e personalizável para os usuários. Assegurar que o painel seja atualizado em tempo real para fornecer informações precisas e oportunas.
@@ -95,6 +180,15 @@ O INCBM, como plugin WordPress, oferecerá aos usuários a funcionalidade de ace
 2. **Validação em Tempo Real:** O INCBM realizará validações em tempo real durante o preenchimento, garantindo a conformidade com os requisitos estabelecidos pelo Ibram.
 
 3. **Facilidade de Envio:** Após o preenchimento, os usuários poderão enviar os dados diretamente por meio da interface web do INCBM, simplificando o processo de declaração de inventário.
+
+```mermaid
+graph TD
+  A[Usuário] -->|Preenchimento do Formulário| B(INCBM)
+  B -->|Envio do Inventário| C{Processamento e Validação}
+  style A fill:#F9EBB2
+  style B fill:#E2F9D9
+  style C fill:#D6F4FF
+```
 
 **Solução de Desenvolvimento:**
 

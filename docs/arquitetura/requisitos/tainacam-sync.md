@@ -16,6 +16,14 @@ A exportação via API exigirá autenticação pelo Museus.br, garantindo que ap
 
 Além da exportação via API, o Tainacam Sync permitirá a geração de arquivos de inventário para envio manual. Essa funcionalidade oferece uma alternativa prática para situações em que a sincronização automática não é viável ou necessária.
 
+```mermaid
+graph TD
+    A[Usuário] -->|Inicia Exportação| B(Exportação via API)
+    A -->|Geração de Arquivo| C(Geração de Arquivo para Envio Manual)
+    B -->|Autenticação Museus.br| D((Finaliza))
+    C --> D
+```
+
 **Solução de Desenvolvimento:**
 
 Implementar no Tainacam Sync uma API robusta para exportação de dados, considerando os padrões de segurança e autenticação pelo Museus.br. Desenvolver uma funcionalidade de geração de arquivo para permitir que os usuários realizem envios manuais quando necessário. Garantir que todas as exportações, seja via API ou arquivo, atendam aos requisitos de integridade e validação de dados.

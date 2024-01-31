@@ -17,4 +17,8 @@ nav:
   - Processos:
       - 'Validação de invetário': 'arquitetura/processos/validacao.md'
       - 'Manutenção de imagens': 'arquitetura/processos/manutencao-imagens.md'
+  - Segurança:
+    - 'Observações': 'arquitetura/seguranca/seguranca.md'
 theme: readthedocs
+plugins:
+  - mermaid2
