@@ -170,20 +170,20 @@ QUIT;
 <pre><code>$ sudo cp 000-default.conf wordpress.conf
 </code></pre>
 <p>Edite a configuração</p>
-<pre><code>$ sudo nano wordress.conf
+<pre><code>$ sudo nano wordpress.conf
 </code></pre>
 <p>Configure assim:<br />
-Servername nomedosite.dominio (no meu caso wordpress.xyz)<br />
+ServerName nomedosite.dominio (no meu caso wordpress.xyz)<br />
 DocumentRoot /var/www/wordpress  </p>
 <p>Habilite o site</p>
-<pre><code>$ sudo a2ensite wordress.conf
+<pre><code>$ sudo a2ensite wordpress.conf
 </code></pre>
 <h2 id="passo-6-configurar-o-arquivo-de-hosts">Passo 6 - configurar o arquivo de hosts</h2>
 <p>{ip} - {nome do host}
 por ex:
 127.0.0.1 - wordpress.local</p>
 <h2 id="passo-7-habilitar-a-reescrita-de-urls-nas-configuracoes-do-apache">Passo 7 - Habilitar a reescrita de URLs nas configurações do apache</h2>
-<p>Isso vai permitir ter links amigáveis no wordress: ex: site.com.br/link-amigavel</p>
+<p>Isso vai permitir ter links amigáveis no wordpress: ex: site.com.br/link-amigavel</p>
 <p>Adicionando:</p>
 <pre><code>&lt;Directory /var/www/wordpress&gt;
         Options Indexes FollowSymLinks
