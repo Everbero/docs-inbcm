@@ -1,9 +1,9 @@
 ![Versão Beta](https://img.shields.io/badge/Vers%C3%A3o-Beta-yellow)
 ![Aguardando Aprovação](https://img.shields.io/badge/Status-Aguardando%20Aprova%C3%A7%C3%A3o-lightgrey)
 
-# Documentação INCBM
+# Documentação INBCM
 
-Este repositório contém a documentação oficial para o projeto INCBM (Inventário Nacional de Bens Culturais Musealizados), uma iniciativa destinada a facilitar o registro, envio e gestão de inventários culturais por instituições museológicas.
+Este repositório contém a documentação oficial para o projeto INBCM (Inventário Nacional de Bens Culturais Musealizados), uma iniciativa destinada a facilitar o registro, envio e gestão de inventários culturais por instituições museológicas.
 
 ## Estrutura do Repositório
 
@@ -45,6 +45,6 @@ Para visualizar a documentação localmente, siga as instruções abaixo:
 
 ## Contribuindo
 
-Se você deseja contribuir para a documentação do INCBM, sinta-se à vontade para enviar pull requests. Certifique-se de seguir as diretrizes de contribuição do projeto.
+Se você deseja contribuir para a documentação do INBCM, sinta-se à vontade para enviar pull requests. Certifique-se de seguir as diretrizes de contribuição do projeto.
 
-Obrigado por contribuir para o desenvolvimento e aprimoramento do INCBM!
+Obrigado por contribuir para o desenvolvimento e aprimoramento do INBCM!

@@ -1,5 +1,5 @@
-site_name: INCMB
-site_description: Documentação do INCMB
+site_name: INBCM
+site_description: Documentação do INBCM
 site_author: Douglas de Araújo
 
 nav:
@@ -8,7 +8,7 @@ nav:
     - 'Configurando o ambiente': 'guias/ambiente.md'
     - 'Instalando o Wordpress': 'guias/wordpress.md'
   - Arquitetura:
-    - 'INCMB': 'arquitetura/requisitos/incbm.md'
+    - 'INBCM': 'arquitetura/requisitos/inbcm.md'
     - 'Tainacam Sync': 'arquitetura/requisitos/tainacam-sync.md'
     - 'Cliente Offline': 'arquitetura/requisitos/cliente-offline.md'
   - Padrões: 

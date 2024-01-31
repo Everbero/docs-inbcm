@@ -6,14 +6,14 @@
 <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="Douglas de Araújo" name="author"/>
 <link href="../../../img/favicon.ico" rel="shortcut icon"/>
-<title>INCMB - INCMB</title>
+<title>INBCM - INBCM</title>
 <link href="../../../css/theme.css" rel="stylesheet"/>
 <link href="../../../css/theme_extra.css" rel="stylesheet"/>
 <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" rel="stylesheet"/>
 <script>
         // Current page data
-        var mkdocs_page_name = "INCMB";
-        var mkdocs_page_input_path = "arquitetura/requisitos/incbm.md";
+        var mkdocs_page_name = "INBCM";
+        var mkdocs_page_input_path = "arquitetura/requisitos/inbcm.md";
         var mkdocs_page_url = null;
       </script>
 <!--[if lt IE 9]>
@@ -27,7 +27,7 @@
 <nav class="wy-nav-side stickynav" data-toggle="wy-nav-shift">
 <div class="wy-side-scroll">
 <div class="wy-side-nav-search">
-<a class="icon icon-home" href="../../.."> INCMB
+<a class="icon icon-home" href="../../.."> INBCM
         </a><div role="search">
 <form action="../../../search.html" class="wy-form" id="rtd-search-form" method="get">
 <input aria-label="Search docs" name="q" placeholder="Search docs" title="Type search term here" type="text"/>
@@ -48,7 +48,7 @@
 </ul>
 <p class="caption"><span class="caption-text">Arquitetura</span></p>
 <ul class="current">
-<li class="toctree-l1 current"><a class="reference internal current" href="./">INCMB</a>
+<li class="toctree-l1 current"><a class="reference internal current" href="./">INBCM</a>
 <ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="#funcionamento-remoto-e-interface-web">Funcionamento Remoto e Interface Web</a>
 </li>
@@ -100,14 +100,14 @@
 <section class="wy-nav-content-wrap" data-toggle="wy-nav-shift">
 <nav aria-label="Mobile navigation menu" class="wy-nav-top" role="navigation">
 <i class="fa fa-bars" data-toggle="wy-nav-top"></i>
-<a href="../../..">INCMB</a>
+<a href="../../..">INBCM</a>
 </nav>
 <div class="wy-nav-content">
 <div class="rst-content"><div aria-label="breadcrumbs navigation" role="navigation">
 <ul class="wy-breadcrumbs">
 <li><a aria-label="Docs" class="icon icon-home" href="../../.."></a> »</li>
 <li>Arquitetura »</li>
-<li class="breadcrumb-item active">INCMB</li>
+<li class="breadcrumb-item active">INBCM</li>
 <li class="wy-breadcrumbs-aside">
 </li>
 </ul>
@@ -115,10 +115,10 @@
 </div>
 <div class="document" itemscope="itemscope" itemtype="http://schema.org/Article" role="main">
 <div class="section" itemprop="articleBody">
-<h1 id="incbm-extensao-do-plugin-tainacam">INCBM - Extensão do Plugin Tainacam</h1>
-<p>O INCBM será uma extensão do plugin Tainacam, ampliando suas funcionalidades para permitir o recebimento, validação e indexação de arquivos de inventário. Essa extensão será executada exclusivamente no site do Ibram, garantindo um ambiente controlado para o processamento das informações.</p>
+<h1 id="inbcm-extensao-do-plugin-tainacam">INBCM - Extensão do Plugin Tainacam</h1>
+<p>O INBCM será uma extensão do plugin Tainacam, ampliando suas funcionalidades para permitir o recebimento, validação e indexação de arquivos de inventário. Essa extensão será executada exclusivamente no site do Ibram, garantindo um ambiente controlado para o processamento das informações.</p>
 <h2 id="funcionamento-remoto-e-interface-web">Funcionamento Remoto e Interface Web</h2>
-<p>O INCBM, implementado como uma extensão do plugin Tainacam no WordPress, disponibilizará uma API para funcionalidades remotas. Isso permitirá aos usuários realizar o download da extensão e a instalação local. A interface web integrada ao plugin facilitará o preenchimento do inventário, seja em modo rascunho ou para o envio final das informações ao Ibram.</p>
+<p>O INBCM, implementado como uma extensão do plugin Tainacam no WordPress, disponibilizará uma API para funcionalidades remotas. Isso permitirá aos usuários realizar o download da extensão e a instalação local. A interface web integrada ao plugin facilitará o preenchimento do inventário, seja em modo rascunho ou para o envio final das informações ao Ibram.</p>
 <div class="mermaid">graph TD    
   A[Usuário] --&gt;|Download e Instalação| B(Instalação Local)
   B --&gt;|Preenchimento do Inventário| C{Envio ao Ibram}
@@ -131,22 +131,22 @@
   style E fill:#F9C4C4
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Desenvolver o INCBM como uma extensão do plugin Tainacam no WordPress, incluindo uma interface web para o preenchimento do inventário e uma API para interação remota, garantindo uma experiência completa aos usuários durante o processo de inventário.</p>
+<p>Desenvolver o INBCM como uma extensão do plugin Tainacam no WordPress, incluindo uma interface web para o preenchimento do inventário e uma API para interação remota, garantindo uma experiência completa aos usuários durante o processo de inventário.</p>
 <h2 id="importacao-e-validacao-de-informacoes">Importação e Validação de Informações</h2>
-<p>O INCBM, como extensão do Tainacam, facilitará a importação e validação de dados e imagens nos formatos Xls, CSV ou Xml. Após validação, os dados serão disponibilizados para consulta no índice nacional através do Tainacam.</p>
+<p>O INBCM, como extensão do Tainacam, facilitará a importação e validação de dados e imagens nos formatos Xls, CSV ou Xml. Após validação, os dados serão disponibilizados para consulta no índice nacional através do Tainacam.</p>
 <div class="mermaid">graph TD
-  A[Museu] --&gt;|Envio de Arquivos| B(INCBM)
+  A[Museu] --&gt;|Envio de Arquivos| B(INBCM)
   B --&gt;|Validação| C{Disponível no Tainacam}
   style A fill:#AADFF9
   style B fill:#E2F9D9
   style C fill:#D6F4FF
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Implementar funcionalidades de importação e validação na extensão INCBM do plugin Tainacam. Isso garantirá a compatibilidade com os formatos especificados e permitirá que os dados importados, após validação, sejam disponibilizados no índice nacional através do Tainacam.</p>
+<p>Implementar funcionalidades de importação e validação na extensão INBCM do plugin Tainacam. Isso garantirá a compatibilidade com os formatos especificados e permitirá que os dados importados, após validação, sejam disponibilizados no índice nacional através do Tainacam.</p>
 <h2 id="integracao-com-registro-de-museus-e-autenticacao">Integração com Registro de Museus e Autenticação</h2>
 <p>A integração com o registro de museus (Museus.Br) será uma forma de autenticar o envio, permitindo que apenas museus devidamente cadastrados possam utilizar as interfaces de envio de arquivos.</p>
 <div class="mermaid">graph TD
-  A[Museu] --&gt;|Envio de Arquivos| B(INCBM)
+  A[Museu] --&gt;|Envio de Arquivos| B(INBCM)
   B --&gt;|Validação| C{Autenticado no Museus.Br}
   C --&gt;|Autenticação Válida| D[Envio Permitido]
   C --&gt;|Autenticação Inválida| E[Envio Bloqueado]
@@ -157,11 +157,11 @@
   style E fill:#F9C4C4
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Integrar o INCBM ao registro de museus (Museus.Br) por meio da extensão Tainacam, utilizando um sistema de autenticação que valide o museu no momento do envio. A autenticação será realizada por meio do número de registro (login e senha na plataforma Museus.Br), garantindo que apenas instituições cadastradas possam enviar informações.</p>
+<p>Integrar o INBCM ao registro de museus (Museus.Br) por meio da extensão Tainacam, utilizando um sistema de autenticação que valide o museu no momento do envio. A autenticação será realizada por meio do número de registro (login e senha na plataforma Museus.Br), garantindo que apenas instituições cadastradas possam enviar informações.</p>
 <h2 id="armazenamento-e-gestao-de-dados">Armazenamento e Gestão de Dados</h2>
-<p>A extensão INCBM do plugin Tainacam terá capacidade de armazenamento eficiente para dados e imagens, seguindo padrões para bens de interesse público.</p>
+<p>A extensão INBCM do plugin Tainacam terá capacidade de armazenamento eficiente para dados e imagens, seguindo padrões para bens de interesse público.</p>
 <div class="mermaid">graph TD
-  A[Museu] --&gt;|Envio de Arquivos| B(INCBM)
+  A[Museu] --&gt;|Envio de Arquivos| B(INBCM)
   B --&gt;|Armazenamento Eficiente| C{Padrões de Bens de Interesse Público}
   C --&gt;|Consulta| D[Indice Nacional Tainacam]
   style A fill:#AADFF9
@@ -170,24 +170,24 @@
   style D fill:#D6F4FF
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Desenvolver uma solução robusta de armazenamento dentro da extensão INCBM, integrada ao Tainacam. Seguir padrões e procedimentos de gestão para garantir a eficiência no armazenamento.</p>
+<p>Desenvolver uma solução robusta de armazenamento dentro da extensão INBCM, integrada ao Tainacam. Seguir padrões e procedimentos de gestão para garantir a eficiência no armazenamento.</p>
 <p><strong>Referências:</strong><br/>
 - <a href="../../padroes/arquivos/">Padrão de arquivo de inventário</a><br/>
 - <a href="../../padroes/imagens/">Padrão de imagens</a><br/>
 - <a href="../../processos/manutencao-imagens/">Manutenção de imagens</a></p>
 <h2 id="periodos-de-lancamento-e-consulta-ao-cidadao">Períodos de Lançamento e Consulta ao Cidadão</h2>
-<p>O INCBM, como parte do Tainacam, permitirá a definição de períodos para o recebimento e reenvio de informações, além de disponibilizar uma interface de consulta pública, tornando os dados acessíveis aos cidadãos brasileiros.</p>
+<p>O INBCM, como parte do Tainacam, permitirá a definição de períodos para o recebimento e reenvio de informações, além de disponibilizar uma interface de consulta pública, tornando os dados acessíveis aos cidadãos brasileiros.</p>
 <div class="mermaid">graph TD
-  A[Museu] --&gt;|Envio de Arquivos| B(INCBM)
+  A[Museu] --&gt;|Envio de Arquivos| B(INBCM)
   B --&gt;|Definição de Períodos| C{Consulta Pública Tainacam}
   style A fill:#AADFF9
   style B fill:#E2F9D9
   style C fill:#D6F4FF
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Incorporar à extensão INCBM do plugin Tainacam a capacidade de definir períodos para o recebimento e reenvio de informações. Implementar uma interface de consulta pública para acesso transparente aos dados.</p>
+<p>Incorporar à extensão INBCM do plugin Tainacam a capacidade de definir períodos para o recebimento e reenvio de informações. Implementar uma interface de consulta pública para acesso transparente aos dados.</p>
 <h2 id="busca-integrada-e-recuperacao-de-informacoes">Busca Integrada e Recuperação de Informações</h2>
-<p>A extensão INCBM do Tainacam realizará buscas integradas em diferentes tipologias de acervo, facilitando a recuperação eficiente de informações.</p>
+<p>A extensão INBCM do Tainacam realizará buscas integradas em diferentes tipologias de acervo, facilitando a recuperação eficiente de informações.</p>
 <div class="mermaid">graph TD
   A[Usuário] --&gt;|Busca Integrada| B(Tainacam)
   B --&gt;|Recuperação de Informações| C{Exibição na Interface Web}
@@ -196,11 +196,11 @@
   style C fill:#D6F4FF
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Desenvolver funcionalidades de busca integrada na extensão INCBM do Tainacam, permitindo a recuperação eficiente de informações entre as tipologias de acervo e a exibição dos dados por meio da interface web do Tainacam.</p>
+<p>Desenvolver funcionalidades de busca integrada na extensão INBCM do Tainacam, permitindo a recuperação eficiente de informações entre as tipologias de acervo e a exibição dos dados por meio da interface web do Tainacam.</p>
 <h2 id="perfis-de-acesso-e-auditoria">Perfis de Acesso e Auditoria</h2>
-<p>O INCBM, como extensão do Tainacam, terá funcionalidades para definir perfis de acesso, possibilitando uma administração eficaz, e registrará ações dos usuários para auditoria, incluindo uma interface gráfica para consulta e geração de relatórios gerenciais.</p>
+<p>O INBCM, como extensão do Tainacam, terá funcionalidades para definir perfis de acesso, possibilitando uma administração eficaz, e registrará ações dos usuários para auditoria, incluindo uma interface gráfica para consulta e geração de relatórios gerenciais.</p>
 <div class="mermaid">graph TD
-  A[Administrador] --&gt;|Definição de Perfis| B(INCBM)
+  A[Administrador] --&gt;|Definição de Perfis| B(INBCM)
   B --&gt;|Ações dos Usuários| C{Registros de Auditoria}
   C --&gt;|Consulta e Relatórios| D[Interface Gráfica]
   style A fill:#F9EBB2
@@ -210,9 +210,9 @@
 
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Implementar funcionalidades de perfis de acesso na extensão INCBM do plugin Tainacam. Registrar ações dos usuários para auditoria e criar uma interface gráfica para consulta e geração de relatórios gerenciais.</p>
+<p>Implementar funcionalidades de perfis de acesso na extensão INBCM do plugin Tainacam. Registrar ações dos usuários para auditoria e criar uma interface gráfica para consulta e geração de relatórios gerenciais.</p>
 <h2 id="painel-de-relatorios">Painel de Relatórios</h2>
-<p>O painel de relatórios será integrado à extensão INCBM do plugin Tainacam, oferecendo uma visão consolidada e detalhada das atividades relacionadas ao inventário de bens culturais musealizados.</p>
+<p>O painel de relatórios será integrado à extensão INBCM do plugin Tainacam, oferecendo uma visão consolidada e detalhada das atividades relacionadas ao inventário de bens culturais musealizados.</p>
 <p><strong>Dados de Acompanhamento</strong><br/>
 O painel fornecerá estatísticas e métricas relacionadas aos envios de inventários, incluindo o número de envios por período, museu, e tipologia de acervo. Isso possibilitará uma visão geral do volume de informações processadas.</p>
 <p><strong>Quantificação dos Elementos de Acervo</strong><br/>
@@ -222,37 +222,37 @@ Os usuários terão a capacidade de personalizar relatórios de acordo com suas 
 <p><strong>Acompanhamento em Tempo Real</strong><br/>
 O painel de relatórios será atualizado em tempo real, proporcionando uma visão dinâmica das atividades de inventário. Os usuários poderão monitorar o progresso e identificar áreas que requerem atenção imediata.</p>
 <div class="mermaid">graph TD
-  A[Usuário] --&gt;|Acesso ao Painel| B(INCBM)
+  A[Usuário] --&gt;|Acesso ao Painel| B(INBCM)
   B --&gt;|Visualização de Dados| C{Relatórios Gerenciais e Estatísticas}
   style A fill:#F9EBB2
   style B fill:#E2F9D9
   style C fill:#D6F4FF
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Integrar ao INCBM uma funcionalidade avançada de painel de relatórios, utilizando gráficos interativos e tabelas dinâmicas para apresentação dos dados. Implementar algoritmos de análise para quantificação de elementos de acervo, oferecendo uma visão detalhada e personalizável para os usuários. Assegurar que o painel seja atualizado em tempo real para fornecer informações precisas e oportunas.</p>
+<p>Integrar ao INBCM uma funcionalidade avançada de painel de relatórios, utilizando gráficos interativos e tabelas dinâmicas para apresentação dos dados. Implementar algoritmos de análise para quantificação de elementos de acervo, oferecendo uma visão detalhada e personalizável para os usuários. Assegurar que o painel seja atualizado em tempo real para fornecer informações precisas e oportunas.</p>
 <h2 id="formulario-online-para-recebimento-de-dados">Formulário Online para Recebimento de Dados</h2>
-<p>O INCBM, como plugin WordPress, oferecerá aos usuários a funcionalidade de acessar um formulário online para o recebimento de dados do inventário. Este formulário será integrado à interface web do INCBM e permitirá aos usuários preencherem as informações necessárias sobre os elementos do acervo, seguindo as categorias de bens culturais musealizados.</p>
+<p>O INBCM, como plugin WordPress, oferecerá aos usuários a funcionalidade de acessar um formulário online para o recebimento de dados do inventário. Este formulário será integrado à interface web do INBCM e permitirá aos usuários preencherem as informações necessárias sobre os elementos do acervo, seguindo as categorias de bens culturais musealizados.</p>
 <p><strong>Benefícios:</strong></p>
 <ol>
 <li>
 <p><strong>Acessibilidade Remota:</strong> O formulário online possibilita que os usuários preencham os dados do inventário de forma remota, proporcionando flexibilidade de acesso.</p>
 </li>
 <li>
-<p><strong>Validação em Tempo Real:</strong> O INCBM realizará validações em tempo real durante o preenchimento, garantindo a conformidade com os requisitos estabelecidos pelo Ibram.</p>
+<p><strong>Validação em Tempo Real:</strong> O INBCM realizará validações em tempo real durante o preenchimento, garantindo a conformidade com os requisitos estabelecidos pelo Ibram.</p>
 </li>
 <li>
-<p><strong>Facilidade de Envio:</strong> Após o preenchimento, os usuários poderão enviar os dados diretamente por meio da interface web do INCBM, simplificando o processo de declaração de inventário.</p>
+<p><strong>Facilidade de Envio:</strong> Após o preenchimento, os usuários poderão enviar os dados diretamente por meio da interface web do INBCM, simplificando o processo de declaração de inventário.</p>
 </li>
 </ol>
 <div class="mermaid">graph TD
-  A[Usuário] --&gt;|Preenchimento do Formulário| B(INCBM)
+  A[Usuário] --&gt;|Preenchimento do Formulário| B(INBCM)
   B --&gt;|Envio do Inventário| C{Processamento e Validação}
   style A fill:#F9EBB2
   style B fill:#E2F9D9
   style C fill:#D6F4FF
 </div>
 <p><strong>Solução de Desenvolvimento:</strong></p>
-<p>Implementar um formulário online integrado à interface web do INCBM, utilizando tecnologias web modernas para garantir uma experiência de usuário intuitiva. O formulário será projetado para orientar os usuários na inserção correta de informações, enquanto validações em tempo real serão aplicadas para assegurar a precisão dos dados. Isso contribuirá para um processo eficiente de recebimento de dados do inventário musealizado.</p>
+<p>Implementar um formulário online integrado à interface web do INBCM, utilizando tecnologias web modernas para garantir uma experiência de usuário intuitiva. O formulário será projetado para orientar os usuários na inserção correta de informações, enquanto validações em tempo real serão aplicadas para assegurar a precisão dos dados. Isso contribuirá para um processo eficiente de recebimento de dados do inventário musealizado.</p>
 </div>
 </div><footer>
 <div aria-label="Footer Navigation" class="rst-footer-buttons" role="navigation">
