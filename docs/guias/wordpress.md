@@ -56,7 +56,7 @@ Edite a configuração
 $ sudo nano wordpress.conf
 ```
 Configure assim:  
-Servername nomedosite.dominio (no meu caso wordpress.xyz)  
+ServerName nomedosite.dominio (no meu caso wordpress.xyz)  
 DocumentRoot /var/www/wordpress  
 
 Habilite o site
