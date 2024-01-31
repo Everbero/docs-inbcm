@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Douglas de Araújo" />
       <link rel="shortcut icon" href="../../img/favicon.ico" />
-    <title>Instalando o Wordpress - INCMB</title>
+    <title>Instalando o Wordpress - INBCM</title>
     <link rel="stylesheet" href="../../css/theme.css" />
     <link rel="stylesheet" href="../../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href="../.." class="icon icon-home"> INCMB
+          <a href="../.." class="icon icon-home"> INBCM
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -84,7 +84,7 @@
               </ul>
               <p class="caption"><span class="caption-text">Arquitetura</span></p>
               <ul>
-                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/incbm/">INCMB</a>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/inbcm/">INBCM</a>
                   </li>
                   <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/tainacam-sync/">Tainacam Sync</a>
                   </li>
@@ -117,7 +117,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="../..">INCMB</a>
+          <a href="../..">INBCM</a>
         
       </nav>
       <div class="wy-nav-content">
@@ -170,20 +170,20 @@ QUIT;
 <pre><code>$ sudo cp 000-default.conf wordpress.conf
 </code></pre>
 <p>Edite a configuração</p>
-<pre><code>$ sudo nano wordress.conf
+<pre><code>$ sudo nano wordpress.conf
 </code></pre>
 <p>Configure assim:<br />
-Servername nomedosite.dominio (no meu caso wordpress.xyz)<br />
+ServerName nomedosite.dominio (no meu caso wordpress.xyz)<br />
 DocumentRoot /var/www/wordpress  </p>
 <p>Habilite o site</p>
-<pre><code>$ sudo a2ensite wordress.conf
+<pre><code>$ sudo a2ensite wordpress.conf
 </code></pre>
 <h2 id="passo-6-configurar-o-arquivo-de-hosts">Passo 6 - configurar o arquivo de hosts</h2>
 <p>{ip} - {nome do host}
 por ex:
 127.0.0.1 - wordpress.local</p>
 <h2 id="passo-7-habilitar-a-reescrita-de-urls-nas-configuracoes-do-apache">Passo 7 - Habilitar a reescrita de URLs nas configurações do apache</h2>
-<p>Isso vai permitir ter links amigáveis no wordress: ex: site.com.br/link-amigavel</p>
+<p>Isso vai permitir ter links amigáveis no wordpress: ex: site.com.br/link-amigavel</p>
 <p>Adicionando:</p>
 <pre><code>&lt;Directory /var/www/wordpress&gt;
         Options Indexes FollowSymLinks
@@ -227,7 +227,7 @@ Não consegue gravar arquivos ou instalar plugins? Certifique-se de ter executad
           </div><footer>
     <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
         <a href="../ambiente/" class="btn btn-neutral float-left" title="Configurando o ambiente"><span class="icon icon-circle-arrow-left"></span> Previous</a>
-        <a href="../../arquitetura/requisitos/incbm/" class="btn btn-neutral float-right" title="INCMB">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../../arquitetura/requisitos/inbcm/" class="btn btn-neutral float-right" title="INBCM">Next <span class="icon icon-circle-arrow-right"></span></a>
     </div>
 
   <hr/>
@@ -253,7 +253,7 @@ Não consegue gravar arquivos ou instalar plugins? Certifique-se de ter executad
       <span><a href="../ambiente/" style="color: #fcfcfc">&laquo; Previous</a></span>
     
     
-      <span><a href="../../arquitetura/requisitos/incbm/" style="color: #fcfcfc">Next &raquo;</a></span>
+      <span><a href="../../arquitetura/requisitos/inbcm/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
