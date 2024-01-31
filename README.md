@@ -17,11 +17,7 @@ Para visualizar a documentação localmente, siga as instruções abaixo:
 
 ### Pré-requisitos
 
-1. Certifique-se de ter o [MkDocs](https://www.mkdocs.org/) instalado. Caso não tenha, você pode instalá-lo utilizando o seguinte comando:
-
-   ```bash
-   pip install mkdocs
-   ```
+1. Certifique-se de ter o [Python](https://www.python.org) instalado.
 
 ### Executando o Servidor Local
 
@@ -33,13 +29,19 @@ Para visualizar a documentação localmente, siga as instruções abaixo:
    cd caminho/para/o/repo
    ```
 
-3. Execute o seguinte comando para iniciar o servidor MkDocs local:
+3. Instale as dependências do projeto:
+
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. Execute o seguinte comando para iniciar o servidor MkDocs local:
 
    ```bash
    mkdocs serve
    ```
 
-4. Abra seu navegador e acesse [http://localhost:8000/](http://localhost:8000/) para visualizar a documentação.
+5. Abra seu navegador e acesse [http://localhost:8000/](http://localhost:8000/) para visualizar a documentação.
 
 ## Contribuindo
 
