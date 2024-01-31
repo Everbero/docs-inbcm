@@ -1,0 +1,19 @@
+site_name: INCMB
+
+
+nav:
+  - Inicio: 'index.md'
+  - 'Primeiros Passos':
+    - 'Configurando o ambiente': 'guias/ambiente.md'
+    - 'Instalando o Wordpress': 'guias/wordpress.md'
+  - Arquitetura:
+    - 'INCMB': 'arquitetura/requisitos/incbm.md'
+    - 'Tainacam Sync': 'arquitetura/requisitos/tainacam-sync.md'
+    - 'Cliente Offline': 'arquitetura/requisitos/cliente-offline.md'
+  - Padrões: 
+      - 'Arquivos de invetário': 'arquitetura/padroes/arquivos.md'
+      - 'Imagens': 'arquitetura/padroes/imagens.md'
+  - Processos:
+      - 'Validação de invetário': 'arquitetura/processos/validacao.md'
+      - 'Manutenção de imagens': 'arquitetura/processos/manutencao-imagens.md'
+    
