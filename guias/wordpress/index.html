@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Douglas de Araújo" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Instalando o Wordpress - INCMB</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Instalando o Wordpress";
+        var mkdocs_page_input_path = "guias/wordpress.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> INCMB
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Inicio</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Primeiros Passos</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../ambiente/">Configurando o ambiente</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="./">Instalando o Wordpress</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#passo-1-instalar-o-apache">Passo 1 - Instalar o apache</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-2-instalar-o-php-74-funciona">Passo 2 - Instalar o php (7.4+ funciona)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-21-instalar-os-pacotes-do-php-que-o-wordpress-usa">Passo 2.1 - Instalar os pacotes do php que o wordpress usa</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-3-instalar-o-banco-de-dados-neste-caso-mariadb">Passo 3 - Instalar o banco de dados, neste caso MariaDb</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-31-configurar-o-banco-de-dados">Passo 3.1 - Configurar o banco de dados</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-4-criar-um-banco-para-o-wordpress">Passo 4 - Criar um banco para o wordpress</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-5-configurando-o-virtualhost-para-a-instalacao">Passo 5 - Configurando o virtualhost para a instalação</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-6-configurar-o-arquivo-de-hosts">Passo 6 - configurar o arquivo de hosts</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-7-habilitar-a-reescrita-de-urls-nas-configuracoes-do-apache">Passo 7 - Habilitar a reescrita de URLs nas configurações do apache</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-8-baixar-o-wordpress">Passo 8 - Baixar o wordpress</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-9-mudar-o-proprietario-dos-arquivos">Passo 9 - Mudar o proprietário dos arquivos</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-10-reiniciar-o-apache">Passo 10 - Reiniciar o apache</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#passo-11-acesse-o-endereco-do-site-no-navegador-e-siga-o-passo-a-passo-da-instalacao">Passo 11 - Acesse o endereço do site no navegador e siga o passo a passo da instalação</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#outras-dicas">Outras dicas</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Arquitetura</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/incbm/">INCMB</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/tainacam-sync/">Tainacam Sync</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/requisitos/cliente-offline/">Cliente Offline</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Padrões</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/padroes/arquivos/">Arquivos de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/padroes/imagens/">Imagens</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Processos</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/processos/validacao/">Validação de invetário</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../../arquitetura/processos/manutencao-imagens/">Manutenção de imagens</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">INCMB</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a> &raquo;</li>
+          <li>Primeiros Passos &raquo;</li>
+      <li class="breadcrumb-item active">Instalando o Wordpress</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="passo-a-passo-para-instalar-o-lamp-wordpress-debianubuntu">Passo a passo para instalar o LAMP + Wordpress debian/ubuntu</h1>
+<p>Este tutuorial explica como instalar o Wordpress em sua máquina local</p>
+<h2 id="passo-1-instalar-o-apache">Passo 1 - Instalar o apache</h2>
+<pre><code>$ sudo apt install apache2  -y
+</code></pre>
+<h2 id="passo-2-instalar-o-php-74-funciona">Passo 2 - Instalar o php (7.4+ funciona)</h2>
+<pre><code>$ sudo apt install php
+</code></pre>
+<h2 id="passo-21-instalar-os-pacotes-do-php-que-o-wordpress-usa">Passo 2.1 - Instalar os pacotes do php que o wordpress usa</h2>
+<pre><code>sudo apt install libapache2-mod-php php-pear php-cgi php-common php-mbstring php-zip php-net-socket  php-gd php-xml-util php-mysql php-bcmath unzip wget git -y
+</code></pre>
+<h2 id="passo-3-instalar-o-banco-de-dados-neste-caso-mariadb">Passo 3 - Instalar o banco de dados, neste caso MariaDb</h2>
+<pre><code>$ sudo apt install mariadb-server mariadb-client -y
+</code></pre>
+<h2 id="passo-31-configurar-o-banco-de-dados">Passo 3.1 - Configurar o banco de dados</h2>
+<p>Neste passo pode responder sim em tudo, mas recomendo não mudar o tipo de autenticação/senha quando solicitado</p>
+<pre><code>$ sudo mysql_secure_installation
+</code></pre>
+<h2 id="passo-4-criar-um-banco-para-o-wordpress">Passo 4 - Criar um banco para o wordpress</h2>
+<p>acessar o shell do mysql</p>
+<pre><code>$ sudo mysql -u root -p
+</code></pre>
+<p>Rodar os comandos a seguir, substituia {senha} pela sua senha, coloque ; no final de cada comando:</p>
+<pre><code>CREATE DATABASE wordpressdb;
+GRANT ALL PRIVILEGES ON wordpressdb.* to root@localhost identified by '{senha}';
+FLUSH PRIVILEGES;
+QUIT;
+</code></pre>
+<h2 id="passo-5-configurando-o-virtualhost-para-a-instalacao">Passo 5 - Configurando o virtualhost para a instalação</h2>
+<p>Navegue para a pasta de virtualhosts para melhor visualiação</p>
+<pre><code>$ cd /etc/apache2/sites-available/
+</code></pre>
+<p>Faça uma cópia do default para facilitar o trabalho, renomeando para o novo host</p>
+<pre><code>$ sudo cp 000-default.conf wordpress.conf
+</code></pre>
+<p>Edite a configuração</p>
+<pre><code>$ sudo nano wordress.conf
+</code></pre>
+<p>Configure assim:<br />
+Servername nomedosite.dominio (no meu caso wordpress.xyz)<br />
+DocumentRoot /var/www/wordpress  </p>
+<p>Habilite o site</p>
+<pre><code>$ sudo a2ensite wordress.conf
+</code></pre>
+<h2 id="passo-6-configurar-o-arquivo-de-hosts">Passo 6 - configurar o arquivo de hosts</h2>
+<p>{ip} - {nome do host}
+por ex:
+127.0.0.1 - wordpress.local</p>
+<h2 id="passo-7-habilitar-a-reescrita-de-urls-nas-configuracoes-do-apache">Passo 7 - Habilitar a reescrita de URLs nas configurações do apache</h2>
+<p>Isso vai permitir ter links amigáveis no wordress: ex: site.com.br/link-amigavel</p>
+<p>Adicionando:</p>
+<pre><code>&lt;Directory /var/www/wordpress&gt;
+        Options Indexes FollowSymLinks
+        AllowOverride All 
+        Require all granted
+&lt;/Directory&gt;
+</code></pre>
+<p>ao arquivo /etc/apache2/apache2.conf</p>
+<pre><code>$ sudo nano /etc/apache2/apache2.conf
+</code></pre>
+<p>habilite mod_rewrite para permitir a reescrita de urls</p>
+<pre><code>$ sudo a2enmod rewrite
+</code></pre>
+<h2 id="passo-8-baixar-o-wordpress">Passo 8 - Baixar o wordpress</h2>
+<p>ir para a pasta destino</p>
+<pre><code>$ cd /var/www/wordpress/
+</code></pre>
+<p>Baixar a versão mais recente do wp</p>
+<pre><code>$ sudo wget https://wordpress.org/latest.zip
+</code></pre>
+<p>descompactar (instale $ sudo apt install zip unzip caso não exista o pacote)</p>
+<pre><code>$ sudo unzip latest.zip
+</code></pre>
+<p>Desta forma o unzip já cria a pasta wordpress que estava compactada :)</p>
+<h2 id="passo-9-mudar-o-proprietario-dos-arquivos">Passo 9 - Mudar o proprietário dos arquivos</h2>
+<pre><code>$ sudo chown -R www-data:www-data /var/www/wordpress
+</code></pre>
+<h2 id="passo-10-reiniciar-o-apache">Passo 10 - Reiniciar o apache</h2>
+<pre><code>$ sudo service apache2 restart
+</code></pre>
+<p>ou</p>
+<pre><code>$ sudo systemctl restart apache2
+</code></pre>
+<h2 id="passo-11-acesse-o-endereco-do-site-no-navegador-e-siga-o-passo-a-passo-da-instalacao">Passo 11 - Acesse o endereço do site no navegador e siga o passo a passo da instalação</h2>
+<p>No meu caso http://wordpress.local</p>
+<h3 id="outras-dicas">Outras dicas</h3>
+<p>Ao acessar o wordpress visite Configurações &gt; links permanetes e mude a estrutura para 'nome do post'<br />
+Não consegue gravar arquivos ou instalar plugins? Certifique-se de ter executado o passo 9.  </p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../ambiente/" class="btn btn-neutral float-left" title="Configurando o ambiente"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../../arquitetura/requisitos/incbm/" class="btn btn-neutral float-right" title="INCMB">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../ambiente/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../../arquitetura/requisitos/incbm/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
