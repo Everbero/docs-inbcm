@@ -31,18 +31,38 @@
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
           <a href="." class="icon icon-home"> INCMB
-        </a><div role="search">
-  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
-      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
-  </form>
-</div>
+        </a>
       </div>
 
       <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
                 <li class="toctree-l1 current"><a class="reference internal current" href=".">Inicio</a>
     <ul class="current">
-    <li class="toctree-l2"><a class="reference internal" href="#inventario-nacional-de-bens-culturais-musealizados">Inventário Nacional de Bens Culturais Musealizados</a>
+    <li class="toctree-l2"><a class="reference internal" href="#antes-de-comecar">Antes de começar</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#o-que-e-o-incbm">O que é o INCBM?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#visao-geral-do-ecossistema">Visão geral do ecossistema</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#os-componentes">Os componentes</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#plugin-incbm">Plugin INCBM</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#plugin-tainacam-sync">Plugin Tainacam Sync</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#cliente-offline">Cliente Offline</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#defesa-desta-solucao">Defesa desta solução</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-seguranca">1. Segurança</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-facilidade-de-acesso">2. Facilidade de Acesso</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-manutencao">3. Manutenção</a>
+    </li>
+        </ul>
     </li>
     </ul>
                 </li>
@@ -77,6 +97,11 @@
                   <li class="toctree-l1"><a class="reference internal" href="arquitetura/processos/manutencao-imagens/">Manutenção de imagens</a>
                   </li>
               </ul>
+              <p class="caption"><span class="caption-text">Segurança</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="arquitetura/seguranca/seguranca/">Observações</a>
+                  </li>
+              </ul>
       </div>
     </div>
     </nav>
@@ -100,11 +125,15 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="inbcm">INBCM</h1>
-<h3 id="inventario-nacional-de-bens-culturais-musealizados">Inventário Nacional de Bens Culturais Musealizados</h3>
+                <h1 id="inventario-nacional-de-bens-culturais-musealizados">Inventário Nacional de Bens Culturais Musealizados</h1>
+<p><img alt="Versão Beta 0.1.0" src="https://img.shields.io/badge/Vers%C3%A3o-Beta-yellow" />
+<img alt="Aguardando Aprovação" src="https://img.shields.io/badge/Status-Aguardando%20Aprova%C3%A7%C3%A3o-lightgrey" /></p>
+<p><strong>Autores:</strong><br />
+<a href="https://github.com/everbero">Douglas de Araújo</a><br />
+<a href="https://github.com/thfields">Thiago Campos</a></p>
 <p>Bem vindo à documentação técnica do INBCM, este repositório visa concentrar e padronizar todos
 os documentos de desenvolvimento do ecossistema INBCM.</p>
-<h1 id="antes-de-comecar">Antes de começar</h1>
+<h2 id="antes-de-comecar">Antes de começar</h2>
 <p>Este site contém a documentação e especificação técnica dos sistemas, voltado para os desenvolvedores INCBM, utilizará referências em linguagem de programação e referências UML, os termos e nomenclaturas museológicos poderão ser substituídos por termos técnicos voltados para programadores de forma que a tradução destes elementos se torne mais fácil para as equipes de desenvolvimento.</p>
 <h2 id="o-que-e-o-incbm">O que é o INCBM?</h2>
 <p>A Resolução Normativa Ibram nº 6, de 31 de agosto de 2021, normatiza o Inventário Nacional dos Bens Culturais Musealizados (INBCM) em concordância com o Decreto nº 8.124, de 17 de outubro de 2013. O INBCM é um instrumento para inserção periódica de dados sobre os bens culturais musealizados em acervos museológico, bibliográfico e arquivístico dos museus brasileiros. A Resolução estabelece elementos de descrição para identificação desses bens, abrangendo categorias como museológicos, bibliográficos e arquivísticos. Além disso, define etapas para implementação do INBCM, como a definição de elementos de descrição, publicação de recomendações técnicas e orientações para envio e consulta das informações. A Resolução revoga normativas anteriores e entrou em vigor em 1º de outubro de 2021.</p>
@@ -119,13 +148,26 @@ os documentos de desenvolvimento do ecossistema INBCM.</p>
 <li><code>Plugin Tainacan Sync</code> - Plugin responsável pela exportação e/ou sincronização de dados entre as instalações do tainacam com o inventário nacional.</li>
 <li><code>Cliente Offline</code> - Um sistema standalone que permite a criação do arquivo de inventário sem necessidade de conexão com a internet ou instalação local do tainacam.</li>
 </ul>
-<h1 id="os-componentes">Os componentes</h1>
-<h2 id="plugin-incbm">Plugin INCBM</h2>
+<h2 id="os-componentes">Os componentes</h2>
+<h3 id="plugin-incbm">Plugin INCBM</h3>
 <p>O plugin INCBM é o grande centralizador de dados, projetado para recepcionar e validar os arquivos de invetário dos museus, funciona como uma extensão do Tainacam consumindo suas apis (<a href="https://tainacan.github.io/tainacan-wiki/#/dev/hooks">hooks</a>, <a href="https://tainacan.github.io/tainacan-wiki/#/dev/internal-api">api interna</a> e <a href="https://redocly.github.io/redoc/?url=https://github.com/tainacan/tainacan-wiki/raw/master/dev/openapi.json">api json</a>) o INCBM adicionará novas funcionalidades.</p>
-<h2 id="plugin-tainacam-sync">Plugin Tainacam Sync</h2>
+<h3 id="plugin-tainacam-sync">Plugin Tainacam Sync</h3>
 <p>Este plugin, também uma extensão para o Tainacam, será utilizado por usuários de museus que já tem o tainacam instalado para fornecer um guia e interface de exportação de dados direto no painel wordpress.</p>
-<h2 id="cliente-offline">Cliente Offline</h2>
+<h3 id="cliente-offline">Cliente Offline</h3>
 <p>O cliente offline é uma aplicação Electron utilizada para criar o arquivo de inventário para os museus que não utilizam o tainacam e/ou não possuem qualidade ou disponibilidade de conexão com o inventário. Esta aplicação fornece formulários para a criação do inventários, gestão dos itens do inventário e exportação do arquivo de inventário para envio através de um formulário. </p>
+<h2 id="defesa-desta-solucao">Defesa desta solução</h2>
+<p>A decisão de dividir a solução em três sistemas independentes, Plugin INCBM, Plugin Tainacam Sync e Cliente Offline, é estrategicamente fundamentada em várias considerações, abordando temas críticos como segurança, facilidade de acesso e manutenção.</p>
+<h3 id="1-seguranca">1. <strong>Segurança</strong></h3>
+<p><strong>Plugin INCBM:</strong> Ao centralizar a validação e recebimento de arquivos, o Plugin INCBM pode ser projetado com uma camada de segurança robusta, implementando autenticação forte e validação rigorosa para garantir a integridade dos dados recebidos. Além disso, a integração com as APIs do Tainacam permite uma comunicação segura entre os sistemas.</p>
+<p><strong>Plugin Tainacam Sync:</strong> Como uma extensão do Tainacam, este plugin aproveita a segurança já implementada no Tainacam. A autenticação pelo Museus.br reforça a segurança durante a exportação de dados, garantindo que apenas usuários autorizados possam realizar operações.</p>
+<p><strong>Cliente Offline:</strong> Ao permitir que museus usem um cliente offline, garantimos que instituições com diferentes níveis de conectividade ou preferências de sistema possam participar do processo de inventário. O Cliente Offline gera um arquivo zip seguro, incorporando checksums para validação e garantindo a integridade dos dados durante o envio.</p>
+<h3 id="2-facilidade-de-acesso">2. <strong>Facilidade de Acesso</strong></h3>
+<p><strong>Plugin INCBM:</strong> O Plugin INCBM oferece uma solução baseada na web e, como um plugin WordPress, é facilmente acessível para usuários autorizados. A interface web simplificada facilita o preenchimento do inventário, garantindo uma experiência amigável.</p>
+<p><strong>Plugin Tainacam Sync:</strong> Integrado ao painel WordPress, este plugin fornece uma interface familiar para usuários do Tainacam, simplificando o processo de exportação de dados. A facilidade de acesso é vital para incentivar a participação e garantir uma transição suave para novos recursos.</p>
+<p><strong>Cliente Offline:</strong> A aplicação Electron proporciona uma solução amigável para usuários que preferem uma ferramenta offline. Com formulários intuitivos e uma interface de usuário simples, o Cliente Offline oferece uma experiência descomplicada para criação e gestão de inventários.</p>
+<h3 id="3-manutencao">3. <strong>Manutenção</strong></h3>
+<p><strong>Plugin INCBM e Plugin Tainacam Sync:</strong> Dividir as funcionalidades entre o Plugin INCBM e o Plugin Tainacam Sync facilita a manutenção e atualizações independentes. Isso permite a evolução contínua de cada componente sem afetar diretamente o funcionamento do outro.</p>
+<p><strong>Cliente Offline:</strong> Como uma aplicação independente, o Cliente Offline também pode ser atualizado de forma independente, garantindo flexibilidade e facilitando a manutenção contínua.</p>
               
             </div>
           </div><footer>
@@ -162,7 +204,6 @@ os documentos de desenvolvimento do ecossistema INBCM.</p>
     <script>var base_url = ".";</script>
     <script src="js/theme_extra.js"></script>
     <script src="js/theme.js"></script>
-      <script src="search/main.js"></script>
     <script>
         jQuery(function () {
             SphinxRtdTheme.Navigation.enable(true);
@@ -174,5 +215,5 @@ os documentos de desenvolvimento do ecossistema INBCM.</p>
 
 <!--
 MkDocs version : 1.5.2
-Build Date UTC : 2024-01-31 02:27:06.766147+00:00
+Build Date UTC : 2024-01-31 03:32:48.836466+00:00
 -->
