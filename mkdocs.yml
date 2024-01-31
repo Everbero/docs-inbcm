@@ -1,5 +1,7 @@
 site_name: INCMB
-
+site_description: Documentação do INCMB
+site_author: Douglas de Araújo
+site_url: https://everbero.github.io/incmb-docs/
 
 nav:
   - Inicio: 'index.md'
