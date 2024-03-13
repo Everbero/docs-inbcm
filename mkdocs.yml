@@ -23,6 +23,7 @@ nav:
     - 'Tieta - Tainacan INBCM Exporter Tool App': 'plugins/tieta/tieta.md'
     - Arquitetura:
         - 'Caso de uso': 'plugins/tieta/arquitetura/caso-de-uso.md'
+        - 'Classes': 'plugins/tieta/arquitetura/classes.md'
 theme: readthedocs
 plugins:
   - search
