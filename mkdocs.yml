@@ -11,14 +11,18 @@ nav:
     - 'INBCM': 'arquitetura/requisitos/inbcm.md'
     - 'Tainacam Sync': 'arquitetura/requisitos/tainacam-sync.md'
     - 'Cliente Offline': 'arquitetura/requisitos/cliente-offline.md'
-  - Padrões: 
-      - 'Arquivos de invetário': 'arquitetura/padroes/arquivos.md'
-      - 'Imagens': 'arquitetura/padroes/imagens.md'
-  - Processos:
-      - 'Validação de invetário': 'arquitetura/processos/validacao.md'
-      - 'Manutenção de imagens': 'arquitetura/processos/manutencao-imagens.md'
-  - Segurança:
-    - 'Observações': 'arquitetura/seguranca/seguranca.md'
+    - Padrões: 
+        - 'Arquivos de invetário': 'arquitetura/padroes/arquivos.md'
+        - 'Imagens': 'arquitetura/padroes/imagens.md'
+    - Processos:
+        - 'Validação de invetário': 'arquitetura/processos/validacao.md'
+        - 'Manutenção de imagens': 'arquitetura/processos/manutencao-imagens.md'
+    - Segurança:
+      - 'Observações': 'arquitetura/seguranca/seguranca.md'
+  - Plugins:
+    - 'Tieta - Tainacan INBCM Exporter Tool App': 'plugins/tieta/tieta.md'
+    - Arquitetura:
+        - 'Caso de uso': 'plugins/tieta/arquitetura/caso-de-uso.md'
 theme: readthedocs
 plugins:
   - search
